@@ -49,8 +49,17 @@ public class Champion {
 		this.armor = armor;
 	}
 	
+	/*
+	 * A regra para um campeao A receber dano de outro campeão B é a seguinte:
+		
+		1) A quantidade de vida do campeão A deve ser decrescida da quantidade de ataque do campeão B, 
+		descontada a quantidade de armadura do campeão A. 
+		A quantidade de vida resultante não pode ser menor que zero.
+		
+		2) Independente da quantidade de armadura do campeão A, pelo menos 1 de vida o campeão A deve perder.
+	*/
 	public void takeDamage(Champion other) {
-		//ToDo		
+		this.life = this.life - other.attack + this.armor;
 	}
 	
 	public String status() {

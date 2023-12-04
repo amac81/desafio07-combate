@@ -63,10 +63,14 @@ public class Program {
 		}while(n<2);
 		
 		
-		nTurnos = askAndValidateIntInput("\nQuantos turnos você deseja executar?", sc);
+		nTurnos = askAndValidateIntInput("\nQuantos turnos você deseja executar? ", sc);
 		
 		//torneio
 		do {
+			championA.takeDamage(championB);
+			championB.takeDamage(championA);
+			
+			
 			
 			System.out.println("\nResultado do turno " + (turno + 1) + ":");
 			System.out.println(championA.status());
@@ -74,6 +78,10 @@ public class Program {
 			
 			turno ++;
 			
+			//if(championA.getLife() < 0 ||championB.getLife() < 0 ) 
+			//{
+			//	break;
+		//	}
 			
 		} while(turno < nTurnos); 
 
