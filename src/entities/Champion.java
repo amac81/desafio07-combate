@@ -6,6 +6,18 @@ public class Champion {
 	private int attack;
 	private int armor;
 	
+	//construtor padrao
+	public Champion () {}
+	
+	
+	//sobrecarga de construtor; construtor com parametros
+	public Champion(String name, int life, int attack, int armor) {
+		this.name = name;
+		this.life = life;
+		this.attack = attack;
+		this.armor = armor;
+	}
+
 	public String getName() {
 		return name;
 	}
