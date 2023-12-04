@@ -11,6 +11,8 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Champion;
+
 
 public class Program {
 
@@ -29,16 +31,34 @@ public class Program {
 		int armadura = 0;
 		
 		//pedir dados dos Champions
+		int n = 0;
+		String posicaoCampeao = "primeiro";
 		
-		System.out.println("Digite os dados do primeiro campeão: ");
-		System.out.print("Nome: ");
-		name = sc.nextLine();
-		vidaInicial = askAndValidateIntInput("Vida inicial: ", sc);
-		ataque = askAndValidateIntInput("Ataque: ", sc);
-		armadura = askAndValidateIntInput("Armadura: ", sc);
-
-		
-	}
+		do {
+			System.out.println("Digite os dados do " + posicaoCampeao + " campeão: ");
+			System.out.print("Nome: ");
+			name = sc.nextLine();
+			
+			vidaInicial = askAndValidateIntInput("Vida inicial: ", sc);
+			ataque = askAndValidateIntInput("Ataque: ", sc);
+			armadura = askAndValidateIntInput("Armadura: ", sc);
+			
+			//Instanciacao dos Champions
+			if(n<1) {
+				Champion championA = new Champion(name, vidaInicial, ataque, armadura);
+				posicaoCampeao = "segundo";			
+				System.out.println();
+			}else {
+				Champion championB = new Champion(name, vidaInicial, ataque, armadura);
+			}
+			
+			n++;
+			
+			//consumir quebra de linha
+			sc.nextLine();
+			
+		}while(n<2);
+}
 		
 		
 	/**
