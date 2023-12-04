@@ -33,12 +33,10 @@ public class Program {
 		System.out.println("Digite os dados do primeiro campeão: ");
 		System.out.print("Nome: ");
 		name = sc.nextLine();
-		System.out.print("Vida inicial: ");
-		vidaInicial = sc.nextInt();
-		System.out.print("Ataque: ");
-		ataque = sc.nextInt();
-		System.out.print("Armadura: ");
-		armadura = sc.nextInt();
+		vidaInicial = askAndValidateIntInput("Vida inicial: ", sc);
+		ataque = askAndValidateIntInput("Ataque: ", sc);
+		armadura = askAndValidateIntInput("Armadura: ", sc);
+
 		
 	}
 		
@@ -60,8 +58,8 @@ public class Program {
 			if (scanner.hasNextInt()) 
 			{
 				value = scanner.nextInt();
-				if(value < 0) {
-					System.out.println("Introduza um número >= 0.");
+				if(value < 1) {
+					System.out.println("Introduza um número >= 1.");
 					askAgain = true;
 				}
 				else {
