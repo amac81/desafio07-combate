@@ -54,7 +54,11 @@ public class Champion {
 	}
 	
 	public String status() {
-		return this.name + ": " + this.life + " de vida";
+		String statusText = " de vida";
+		
+		statusText += this.life >0 ? "" : " (morreu)";
+		
+		return this.name + ": " + this.life + statusText;
 	}
 
 }
