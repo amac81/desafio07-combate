@@ -24,7 +24,7 @@ public class Program {
 		
 		// variaveis
 		int nTurnos = 0;
-		int nRepeticoes = 0;
+		int turno = 0;
 		String name = "";
 		int vidaInicial = 0;
 		int ataque = 0;
@@ -58,7 +58,25 @@ public class Program {
 			sc.nextLine();
 			
 		}while(n<2);
-}
+		
+		
+		nTurnos = askAndValidateIntInput("\nQuantos turnos você deseja executar?", sc);
+		//torneio
+		do {
+			
+			System.out.println("\nResultado do turno " + (turno + 1) + ":");
+			
+			
+			turno ++;
+			
+			//consumir quebra de linha
+			sc.nextLine();
+		} while(turno < nTurnos); 
+
+		System.out.println("\nFIM DO COMBATE");
+		
+		sc.close();
+	}
 		
 		
 	/**
