@@ -30,10 +30,13 @@ public class Program {
 		int ataque = 0;
 		int armadura = 0;
 		
-		//pedir dados dos Champions
+		
 		int n = 0;
 		String posicaoCampeao = "primeiro";
 		
+		Champion championA = null, championB = null;
+		
+		//pedir dados dos Champions
 		do {
 			System.out.println("Digite os dados do " + posicaoCampeao + " campeão: ");
 			System.out.print("Nome: ");
@@ -45,11 +48,11 @@ public class Program {
 			
 			//Instanciacao dos Champions
 			if(n<1) {
-				Champion championA = new Champion(name, vidaInicial, ataque, armadura);
+				championA = new Champion(name, vidaInicial, ataque, armadura);
 				posicaoCampeao = "segundo";			
 				System.out.println();
 			}else {
-				Champion championB = new Champion(name, vidaInicial, ataque, armadura);
+				championB = new Champion(name, vidaInicial, ataque, armadura);
 			}
 			
 			n++;
@@ -61,16 +64,17 @@ public class Program {
 		
 		
 		nTurnos = askAndValidateIntInput("\nQuantos turnos você deseja executar?", sc);
+		
 		//torneio
 		do {
 			
 			System.out.println("\nResultado do turno " + (turno + 1) + ":");
-			
+			System.out.println(championA.status());
+			System.out.println(championB.status());
 			
 			turno ++;
 			
-			//consumir quebra de linha
-			sc.nextLine();
+			
 		} while(turno < nTurnos); 
 
 		System.out.println("\nFIM DO COMBATE");

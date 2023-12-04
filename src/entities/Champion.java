@@ -54,7 +54,7 @@ public class Champion {
 	}
 	
 	public String status() {
-		return "";
+		return this.name + ": " + this.life + " de vida";
 	}
 
 }
