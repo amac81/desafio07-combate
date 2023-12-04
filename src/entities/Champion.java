@@ -9,7 +9,6 @@ public class Champion {
 	//construtor padrao
 	public Champion () {}
 	
-	
 	//sobrecarga de construtor; construtor com parametros
 	public Champion(String name, int life, int attack, int armor) {
 		this.name = name;
@@ -57,8 +56,5 @@ public class Champion {
 	public String status() {
 		return "";
 	}
-	
-	
-	
 
 }
