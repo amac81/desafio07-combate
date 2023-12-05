@@ -1,5 +1,10 @@
 /**
-* Programa...
+* Este programa simula um combate entre dois campeoes.
+* cada campeao tem, para alem do nome, caracteristicas proprias de ataque e defesa.
+* 
+* A cada turno o campeao B inflige danos ao campeao B e viceversa
+* 
+* O combate termina quando um dos campeoes morrer
 * 
 * @author  Arnaldo Canelas
 * @version 1.0
