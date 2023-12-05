@@ -35,7 +35,6 @@ public class Program {
 		int ataque = 0;
 		int armadura = 0;
 		
-		
 		int n = 0;
 		String posicaoCampeao = "primeiro";
 		

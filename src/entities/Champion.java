@@ -50,16 +50,16 @@ public class Champion {
 	}
 	
 	public void takeDamage(Champion other) {
-		int dano = other.getAttack() - this.armor;
+		int dano = other.getAttack() - armor;
 
 		//pelo menos 1 de vida deve perder
-		this.life = (dano <= 0) ? this.life -1 : ((this.life - dano > 0) ? this.life - dano : 0);
+		life = (dano <= 0) ? life -1 : ((life - dano > 0) ? life - dano : 0);
 	}
 	
 	public String status() {
 		String statusText = " de vida";		
-		statusText += this.life >0 ? "" : " (morreu)";		
-		return this.name + ": " + this.life + statusText;	
+		statusText += life >0 ? "" : " (morreu)";		
+		return name + ": " + life + statusText;	
 	}
 
 }
