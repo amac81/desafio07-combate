@@ -92,10 +92,10 @@ public class Program {
 			
 			turno ++;
 			
-			/*if(championA.getLife() == 0 ||championB.getLife() == 0 ) 
+			if(championA.getLife() == 0 || championB.getLife() == 0 ) 
 			{
 				break;
-			}*/
+			}
 			
 		} while(turno < nTurnos); 
 
