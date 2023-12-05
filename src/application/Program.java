@@ -37,7 +37,7 @@ public class Program {
 		Champion championA = null, championB = null;
 		
 		//pedir dados dos Champions
-		/*
+		
 		do {
 			System.out.println("Digite os dados do " + posicaoCampeao + " campeão: ");
 			System.out.print("Nome: ");
@@ -63,23 +63,7 @@ public class Program {
 			
 		}while(n<2);
 		
-		
 		nTurnos = askAndValidateIntInput("\nQuantos turnos você deseja executar? ", sc);
-		
-		*/
-		
-		//TESTE Exemplo 1:  
-		
-		/*championA = new Champion("Darius", 50, 8, 1);
-		championB = new Champion("Fiora", 40, 10, 2);
-		nTurnos = 2;*/
-		
-		
-		//TESTE Exemplo 2:  
-		championA = new Champion("Darius", 50, 8, 1);
-		championB = new Champion("Fiora", 40, 30, 10);
-		nTurnos = 4;
-
 		
 		//torneio
 		do {
