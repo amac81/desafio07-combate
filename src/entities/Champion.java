@@ -54,7 +54,10 @@ public class Champion {
 		int dano = other.getAttack() - this.armor;
 
 		//pelo menos 1 de vida deve perder
-		if (dano <= 0) 
+		this.life = (dano <= 0) ? this.life -1 : ((this.life - dano > 0) ? this.life - dano : 0);
+		
+		//pelo menos 1 de vida deve perder
+		/*if (dano <= 0) 
 		{
 			this.life --;
 		}
@@ -66,7 +69,7 @@ public class Champion {
 			else {
 				this.life = 0;
 			}	
-		}
+		}*/
 		
 	}
 	
